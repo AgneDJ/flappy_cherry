@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
+import "../App.css";
 
 function Background() {
-  <canvas id="myCanvas" width="300" height="150"></canvas>;
-  return <canvas id="myCanvas" width="300" height="150"></canvas>;
+  return <canvas id="myCanvas"></canvas>;
 }
 
 export default Background;
