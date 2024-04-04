@@ -1,28 +1,29 @@
 .App {
-  text-align: center;
+  text-align: left;
+  
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
-    border-radius: 70px;  
+    border-radius: 70px;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #102348;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
@@ -40,7 +41,12 @@
 }
 
 #myCanvas {
-  width: 300 px;
-  height: 150 px;
-  background-color: green;
+  width: 800;
+  height: 300;
+  background-color: rgb(128, 0, 34);
+}
+
+h1 {
+  font-size: large;
+  text-align: center;
 }
