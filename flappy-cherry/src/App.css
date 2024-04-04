@@ -41,8 +41,8 @@
 }
 
 #myCanvas {
-  width: 800;
-  height: 300;
+  min-width: 600px;
+  min-height: 500px;
   background-color: rgb(128, 0, 34);
 }
 
