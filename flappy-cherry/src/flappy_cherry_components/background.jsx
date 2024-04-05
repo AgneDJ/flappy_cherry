@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "../App.css";
 
 function Background() {
-  return <canvas id="myCanvas"></canvas>;
+  return <div id="gameBackground"></div>;
 }
 
 export default Background;

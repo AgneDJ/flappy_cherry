@@ -5,7 +5,7 @@ import Cherry from "../flappy_cherry_components/cherry";
 
 function Game() {
   return (
-    <div>
+    <div id="gameWindow">
       <Background />
       <Cherry />
     </div>
