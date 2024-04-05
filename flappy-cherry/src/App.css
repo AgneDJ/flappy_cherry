@@ -43,10 +43,11 @@
 #myCanvas {
   min-width: 600px;
   min-height: 500px;
-  background-color: rgb(128, 0, 34);
+  /* background-color: rgb(32, 0, 128); */
+  background-image: url('./flappy_cherry_components/sky.png');
   position: absolute  ;
   opacity: 50%;
-  z-index: 1;
+  z-index: 1; 
 }
 
 h1 {
@@ -55,9 +56,10 @@ h1 {
 }
 
 .Cherry {
-  width: 100px;
-  height: 100px;
-  position: relative;
+  background-image: url('./flappy_cherry_components/flying_cherry.png');
+  position: absolute;
+  min-width: 50px;
+  min-height: 50px;
   z-index: 2;
   
 }
