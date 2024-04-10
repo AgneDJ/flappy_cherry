@@ -46,7 +46,7 @@
   min-width: 800px;
   min-height: 500px;
   position: absolute  ;
-  opacity: 100%;
+  opacity: 10%;
   z-index: 1;
 }
 
@@ -63,12 +63,12 @@ h1 {
   text-align: center;
 }
 
-.Cherry {
-  background-image: url('../public/assets/images/flying_cherry.webp');
-  /* background-color: red; */
-  position: absolute;
-  min-width: 50px;
-  min-height: 50px;
-  z-index: 2;
-  
+/* .Cherry {
+  height: 20px;
+
+}   */
+
+.container {
+  display: flex;
+  justify-content: space-around;
 }

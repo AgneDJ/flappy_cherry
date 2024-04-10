@@ -1,13 +1,16 @@
 import React, { useRef, useEffect } from "react";
 import "../App.css";
 import Background from "../flappy_cherry_components/background";
-import Cherry from "../flappy_cherry_components/cherry";
+// import Cherry from "../flappy_cherry_components/cherry";
+import Control from "./control";
 
 function Game() {
+  <Background />;
+
   return (
-    <div id="gameWindow">
+    <div>
       <Background />
-      <Cherry />
+      <Control />
     </div>
   );
 }
