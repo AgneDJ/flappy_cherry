@@ -24,23 +24,23 @@ const Control = () => {
   };
   return (
     <div>
+      <div style={{ position: "relative" }}>
+        <button onClick={() => moveObject("left")}>Left</button>
+        <button onClick={() => moveObject("right")}>Right</button>
+        <button onClick={() => moveObject("up")}>Up</button>
+        <button onClick={() => moveObject("down")}>Down</button>
+      </div>
       <div
         style={{
           position: "relative",
           left: position.x + "px",
           top: position.y + "px",
-          minWidth: "10%",
-          minHeight: "10%",
           zIndex: 2,
           transition: "left 0.3s, top 0.3s",
         }}
       >
         <Cherry />
       </div>
-      <button onClick={() => moveObject("left")}>Left</button>
-      <button onClick={() => moveObject("right")}>Right</button>
-      <button onClick={() => moveObject("up")}>Up</button>
-      <button onClick={() => moveObject("down")}>Down</button>
     </div>
   );
 };
