@@ -6,17 +6,34 @@ const Control = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const moveObject = (direction) => {
-    console.log(setPosition);
     setPosition((prevPosition) => {
       switch (direction) {
         case "left":
-          return { ...prevPosition, x: prevPosition.x - 10 };
+          if (prevPosition.x <= 0) {
+            return { ...prevPosition, x: 0 };
+          } else {
+            return { ...prevPosition, x: prevPosition.x - 10 };
+          }
+
         case "right":
-          return { ...prevPosition, x: prevPosition.x + 10 };
+          if (prevPosition.x >= 650) {
+            return { ...prevPosition, x: 650 };
+          } else {
+            return { ...prevPosition, x: prevPosition.x + 50 };
+          }
+
         case "up":
-          return { ...prevPosition, y: prevPosition.y - 10 };
+          if (prevPosition.y <= 0) {
+            return { ...prevPosition, y: 0 };
+          } else {
+            return { ...prevPosition, y: prevPosition.y - 50 };
+          }
         case "down":
-          return { ...prevPosition, y: prevPosition.y + 10 };
+          if (prevPosition.y >= 350) {
+            return { ...prevPosition, y: 350 };
+          } else {
+            return { ...prevPosition, y: prevPosition.y + 10 };
+          }
         default:
           return prevPosition;
       }
