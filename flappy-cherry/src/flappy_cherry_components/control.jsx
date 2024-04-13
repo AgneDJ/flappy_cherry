@@ -6,9 +6,25 @@ const Control = () => {
   const [position, setPosition] = useState({ x: 100, y: 100 });
   const [velocity, setVelocity] = useState({ x: 0, y: 0 });
 
+  const useKeyDown = (callback, keys) => {
+    const onKeyDown = (event) => {
+      if (keys.includes(event.key)) {
+        event.preventDefault();
+        callback(event.key, event);
+      }
+    };
+
+    useEffect(() => {
+      document.addEventListener("keydown", onKeyDown);
+      return () => {
+        document.removeEventListener("keydown", onKeyDown);
+      };
+    }, [onKeyDown]);
+  };
+
   useEffect(() => {
     const gravity = 0.2;
-    const friction = 0.2;
+    const friction = 0.8; // Adjusted friction for more realistic movement
 
     const updatePosition = () => {
       const newVelocity = { ...velocity, y: velocity.y + gravity };
@@ -22,18 +38,24 @@ const Control = () => {
         x: position.x + newVelocityWithFriction.x,
         y: position.y + newVelocityWithFriction.y,
       };
-      //Boundary check
-      if (newPosition.x < 0) {
-        newPosition.x = 0;
-      } else if (newPosition.x > 700) {
-        newPosition.x = 650;
+
+      // Boundary check
+      const minX = 0;
+      const maxX = 650; // Adjusted maximum X position
+      const minY = 0;
+      const maxY = 370; // Adjusted maximum Y position
+
+      if (newPosition.x < minX) {
+        newPosition.x = minX;
+      } else if (newPosition.x > maxX) {
+        newPosition.x = maxX;
       }
 
-      if (newPosition.y < 0) {
-        newPosition.y = 0;
+      if (newPosition.y < minY) {
+        newPosition.y = minY;
         setVelocity({ ...newVelocityWithFriction, y: 0 });
-      } else if (newPosition.y > 370) {
-        newPosition.y = 370;
+      } else if (newPosition.y > maxY) {
+        newPosition.y = maxY;
         setVelocity({ ...newVelocityWithFriction, y: 0 });
       }
 
@@ -41,12 +63,19 @@ const Control = () => {
       setVelocity(newVelocityWithFriction);
     };
 
-    const gameLoop = setInterval(() => {
-      updatePosition();
-    }, 1000 / 60);
+    const gameLoop = setInterval(updatePosition, 1000 / 60);
 
     return () => clearInterval(gameLoop);
   }, [position, velocity]);
+
+  useKeyDown(
+    (key) => {
+      if (key === " ") {
+        fly();
+      }
+    },
+    [" "]
+  );
 
   const fly = () => {
     setVelocity({ ...velocity, y: -10 });
@@ -65,7 +94,6 @@ const Control = () => {
       >
         <Cherry />
       </div>
-      <button onClick={fly}>Fly</button>
     </div>
   );
 };
