@@ -40,21 +40,34 @@
 
 }
 
-#gameBackground {
-  /* background-image: url('../public/assets/images/sky.png'); */
-  background-color: green;
+.gameBackground {
+  background-image: url('../public/assets/images/sky.png');
+  /* background-color: green; */
   min-width: 800px;
   min-height: 500px;
+  display: flex;
   position: absolute  ;
-  opacity: 10%;
+  opacity: 50%;
   z-index: -1;
+  flex-direction: column;
+  margin-left: 100px;
+  animation: moveBackground 5s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0  ;
+  }
+  to {
+    background-position:  365% 0;
+  }
 }
 
 #gameWindow {
-  position: absolute  ;
+  /* position: absolute  ;
   display: flex;
   margin-left: 100px;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 
@@ -68,6 +81,7 @@ h1 {
   position: absolute  ;
   height: 128px;
   width: 128px;
+  margin-left: 100px;
 
 }  
 
@@ -75,3 +89,6 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
+
+
+
