@@ -4,7 +4,7 @@ import "../App.css";
 function Cherry() {
   return (
     <img
-      src="../assets/images/flying_cherry.webp"
+      src="../assets/images/flying_cherry.png"
       className="Cherry"
       alt="flying_cherry"
     />
