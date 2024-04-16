@@ -50,7 +50,7 @@
   z-index: -1;
   flex-direction: column;
   margin-left: 100px;
-  animation: moveBackground 5s linear infinite;
+  animation: moveBackground 20s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -81,17 +81,17 @@ h1 {
   width: 128px;
   height: 128px;
   position: absolute;
-  opacity: 1; /* 100% is represented as 1 */
-  margin-left: 128px; /* Initial position, if needed */
-  animation: moveCloud 10s linear infinite;
+  opacity: 1; 
+  margin-left: 0px; 
+  animation: moveCloud 5s linear infinite;
 }
 
 @keyframes moveCloud {
   from {
-    left: 100%; /* Start from the far left */
+    right: 0%; 
   }
   to {
-    left: -100%;
+    right: 100%;
   }
 }
 
