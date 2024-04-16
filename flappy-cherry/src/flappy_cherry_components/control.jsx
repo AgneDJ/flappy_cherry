@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cherry from "./cherry";
+
 import "../App.css";
 
 const Control = () => {
