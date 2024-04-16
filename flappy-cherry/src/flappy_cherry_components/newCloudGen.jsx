@@ -1,39 +1,37 @@
-import React, { useState, useEffect } from "react";
-import Cloud from "./cloud_1";
+import React, { useEffect, useState } from "react";
 import "../App.css";
+import Cloud from "./cloud_1";
 
 function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
 
   useEffect(() => {
-    const numberOfImages = 5;
-    const newClouds = [];
+    const numberOfImages = 12;
+    const delay = 1000;
+    let timers = [];
 
     for (let i = 0; i < numberOfImages; i++) {
-      const leftPos = Math.random() * 100;
-      const topPos = Math.random() * 100;
-      console.log(`Cloud ${i}: left ${leftPos}%, top ${topPos}%`); // Debugging output
+      let timer = setTimeout(() => {
+        const newCloud = (
+          <Cloud
+            key={i}
+            style={{
+              top: `${Math.random() * 100}%`,
+              right: `${Math.random() * 100}%`,
+            }}
+          />
+        );
+        setClouds((prevClouds) => [...prevClouds, newCloud]);
+      }, i * delay);
 
-      newClouds.push(
-        <Cloud
-          key={i}
-          className="cloud"
-          style={{
-            left: `${leftPos}%`,
-            top: `${topPos}%`,
-            position: "absolute",
-          }}
-        />
-      );
+      timers.push(timer);
     }
 
-    setClouds(newClouds);
+    return () => timers.forEach((timer) => clearTimeout(timer));
   }, []);
 
   return (
     <div style={{ position: "relative", width: "100%", height: "500px" }}>
-      {" "}
-      {/* Ensure container is large enough */}
       {clouds}
     </div>
   );

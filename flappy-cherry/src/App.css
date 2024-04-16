@@ -78,20 +78,19 @@ h1 {
 }  
 
 .Cloud {
-  width: 128px;
-  height: 128px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   opacity: 1; 
-  margin-left: 0px; 
   animation: moveCloud 5s linear infinite;
 }
 
 @keyframes moveCloud {
   from {
-    right: 0%; 
+    right: -50px;  
   }
   to {
-    right: 100%;
+    right: 100%;  
   }
 }
 
