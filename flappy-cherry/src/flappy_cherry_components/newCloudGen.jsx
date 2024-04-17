@@ -6,7 +6,7 @@ function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
 
   useEffect(() => {
-    const numberOfImages = 12;
+    const numberOfImages = (Math.random() * 100) / 10;
     const delay = 1000;
     let timers = [];
 

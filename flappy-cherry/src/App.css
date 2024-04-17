@@ -74,8 +74,18 @@ h1 {
   height: 128px;
   width: 128px;
   margin-left: 100px;
+  animation: rotation 5s infinite linear;
 
 }  
+
+@keyframes rotation {
+  25% {
+    transform: rotate(25deg);
+  }
+  45% {
+    transform: rotate(45deg);
+  }
+}
 
 .Cloud {
   width: 50px;
