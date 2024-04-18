@@ -18,6 +18,8 @@ function NewCloudGen() {
             style={{
               top: `${Math.random() * 100}%`,
               right: `${Math.random() * 100}%`,
+              // height: "20%",
+              // width: "20%",
             }}
           />
         );
