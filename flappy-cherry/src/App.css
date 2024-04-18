@@ -88,8 +88,18 @@ h1 {
 }
 
 .Cloud {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: 1; 
+  animation: moveCloud 5s linear infinite;
+}
+
+.Lilly {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-top: 30px;
   position: absolute;
   opacity: 1; 
   animation: moveCloud 5s linear infinite;
