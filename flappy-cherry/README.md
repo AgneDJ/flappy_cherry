@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+<a name="top"></a>
+<a name="name"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Flappy Cherry
 
-## Available Scripts
+<a name="logo"></a>
+<img src="/flappy-cherry/public/assets/images/cherry.webp" width="100" height="100">
 
-In the project directory, you can run:
+_The Cherry Cloud logo_
 
-### `npm start`
+<a name="desc"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Flappy Cherry is a web app built from scratch and developed in React by Agne Djacenko, Lucca Wang and Nadia Hina. Flappy Cherry a feature of its sister app [Cherry Cloud](https://github.com/LuccaWang1/cherry-cloud) (which is a full stack web app that's a platform).
 
-### `npm test`
+As Millennials, we thought it'd be fun making a game that's a rendition of the 2013 Flappy Bird (mobile) game.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a name="index"></a>
 
-### `npm run build`
+## Table of Contents
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Name](#name)
+- [Logo](#logo)
+- [Description](#desc)
+- Table of Contents
+- [Features](#features)
+- [Technologies and Requirements](#tech)
+- [Data Model](#model)
+- [How To Run](#run)
+- [Authors](#authors)
+- [How to Contribute (for collaborative authors)](#contribute)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a name="features"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- User authentication (accounts)
+- Gameplay mechanics
+- Modular and reusable user interface (UI) components
+- Graphics
+- Persistence and data storage - leader board and achievements in Postgres database
+- Accessibility - high contrast mode
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[Back to the Table of Contents](#index)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a name="tech"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies and Requirements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React
+- JSON
+- JavaScript
+- Weather API (weather updates and conditional rendering)
+- CSS
+- DALL-E
+- Markdown
 
-## Learn More
+[Back to the Table of Contents](#index)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a name="model"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Data Model
 
-### Code Splitting
+This will be updated
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Back to the Table of Contents](#index)
 
-### Analyzing the Bundle Size
+<a name="run"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How to Run
 
-### Making a Progressive Web App
+Expose environment variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+This will be updated
+```
 
-### Advanced Configuration
+Install the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+$ git clone https://github.com/AgneDJ/flappy_cherry.git
+$ virtualenv env
+$ source env/bin/activate
+```
 
-### Deployment
+To run the server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+open localhost:3000
+```
 
-### `npm run build` fails to minify
+Run the tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This will be updated
+
+[Back to the Table of Contents](#index)
+
+<a name="authors"></a>
+
+### Authors
+
+- [Agne Djacenko](https://www.linkedin.com/in/agne-djacenko/)
+- [Lucca Wang](https://www.linkedin.com/in/luccawang/)
+- [Nadia Hina](https://www.linkedin.com/in/nadia-hina-a1161a272/)
+
+[Back to the Table of Contents](#index)
+
+<a name="contribute"></a>
+
+### How to Contribute
+
+You can only contribute to this project if you are listed as a collaborator on the project remote repo in GitHub. (You must respond to the email sent to you from Github and accept the invitation to become a contributor on the project.)
+
+#### Git
+
+##### First getting started:
+
+1. Clone the repo onto your local machine
+   `git clone https://github.com/AgneDJ/flappy_cherry`
+
+##### Creating a branch
+
+1. `cd` into your project directory
+2. `git branch` to check what branch you are currently on (you will see a star next to it)
+3. Make sure you are on your main branch
+   `git checkout main`
+4. It's good practice to pull from main before creating a new branch. (This will help you avoid merge conflicts.) (Github = origin)
+   `git pull origin main`
+5. Create a new branch every time you work on something new (each ticket). The branch name should be short and descriptive.
+   `git checkout -b trello_ticket_number_then_branch_name`
+
+##### Working on your branch
+
+1. `git branch` to make sure you're on your new branch. If not, `git checkout` like above to get on your new branch.
+2. Work on your code, make your changes
+3. Commit often after any change
+
+   ```
+   git status
+   git add .
+   git commit -m "descriptive message of changes - in past tense format"
+   ```
+
+##### Pushing your code to Github
+
+1. Push the changes in your branch to Github
+   `git push origin branch_name`
+2. Now if you look at the repo on Github you will see 'Your recently pushed branches.'
+3. Click on 'Compare & pull request'
+4. See the changes you made and click the green button 'Create pull request'
+
+##### Pull your changes
+
+1. In the previous step, you created a pull request, which is a request to merge your branch into the main branch.
+2. You will be able to see if you have merging conflicts or not.
+3. If you get a green thumbs up, click the green button 'Merge pull request'.
+4. Now your branch and code has merged into the main code base.
+
+##### Update local main and delete feature branch
+
+1. Return to the main branch
+   `git checkout main`
+2. Make sure to update the code on your local machine to match the most up-to-date code living in the main branch on Github.
+   `git pull origin main`
+3. It's good practice to delete the old branch.
+   `git branch -D branch_name`
+4. Create a new branch off of main to keep on coding.
+   `git checkout -b new_branch_name`
+
+[Back to the Table of Contents](#index)
+
+[Back to Top](#top)
