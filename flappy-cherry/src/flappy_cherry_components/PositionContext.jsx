@@ -1,21 +1,28 @@
 import React from "react";
-import Control from "./control";
-import NewCloudGen from "./newCloudGen";
 
-function DisplayInfo({ position }) {
+function DisplayInfo({ cherryPosition, cloudPositions }) {
   return (
     <div>
-      <div>
-        Current Position: X: {position.x}, Y: {position.y}
-      </div>
-      <div>
-        <h3>Cloud Positions:</h3>
-        {position.map((pos, index) => (
-          <div key={index}>
-            Cloud {index}: X: {pos.right}%, Y: {pos.top}%
-          </div>
-        ))}
-      </div>
+      {cherryPosition && typeof cherryPosition === "object" && (
+        <div>
+          Cherry Position: X: {cherryPosition.x}, Y: {cherryPosition.y}
+        </div>
+      )}
+
+      {Array.isArray(cloudPositions) && (
+        <div>
+          <h3>Cloud Positions:</h3>
+          {cloudPositions.map((pos, index) => (
+            <div key={index}>
+              Cloud {index}: X: {pos.right}%, Y: {pos.top}%
+            </div>
+          ))}
+        </div>
+      )}
+
+      {!cherryPosition && (!cloudPositions || cloudPositions.length === 0) && (
+        <p>No position data available</p>
+      )}
     </div>
   );
 }

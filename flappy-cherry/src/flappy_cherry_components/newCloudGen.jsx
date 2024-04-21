@@ -5,7 +5,7 @@ import DisplayInfo from "./PositionContext";
 
 function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
-  const [positions, setPositions] = useState([]);
+  const [cloudPositions, setCloudPositions] = useState([]);
 
   useEffect(() => {
     const numberOfImages = (Math.random() * 100) / 10;
@@ -27,7 +27,7 @@ function NewCloudGen() {
           />
         );
         setClouds((prevClouds) => [...prevClouds, newCloud]);
-        setPositions((prevPositions) => [
+        setCloudPositions((prevPositions) => [
           ...prevPositions,
           { top: topPosition, right: rightPosition },
         ]);
@@ -42,7 +42,8 @@ function NewCloudGen() {
   return (
     <div style={{ position: "relative", width: "100%", height: "500px" }}>
       {clouds}
-      <DisplayInfo position={positions} />
+      <DisplayInfo cloudPositions={cloudPositions} />
+      console.log(cloudPositions);
     </div>
   );
 }
