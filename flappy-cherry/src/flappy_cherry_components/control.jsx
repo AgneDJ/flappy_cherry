@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cherry from "./cherry";
-
+import DisplayInfo from "./PositionContext";
 import "../App.css";
 
 const Control = () => {
@@ -25,7 +25,7 @@ const Control = () => {
 
   useEffect(() => {
     const gravity = 0.2;
-    const friction = 0.8; // Adjusted friction for more realistic movement
+    const friction = 0.8;
 
     const updatePosition = () => {
       const newVelocity = { ...velocity, y: velocity.y + gravity };
@@ -94,6 +94,7 @@ const Control = () => {
         }}
       >
         <Cherry />
+        <DisplayInfo position={position} />
       </div>
     </div>
   );

@@ -1,26 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import "../App.css";
 
-function Cherry() {
+function Cherry({ style }) {
   return (
-    <img
-      src="../assets/images/flying_cherry.png"
-      className="Cherry"
-      alt="flying_cherry"
-    />
+    <div style={style}>
+      {" "}
+      {/* Apply style prop to the div */}
+      <img
+        src="../assets/images/cherry.png"
+        className="Cherry"
+        alt="A cherry"
+      />
+    </div>
   );
 }
-
-// const Cherry = ({ y }) => {
-//   return (
-//     <div>
-//       <img
-//         src="../assets/images/flying_cherry.webp"
-//         className="Cherry"
-//         alt="flying_cherry"
-//       />
-//     </div>
-//   );
-// };
 
 export default Cherry;

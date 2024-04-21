@@ -1,24 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
+import React from "react";
 
-const PositionContext = createContext(null);
-
-export const usePosition = () => useContext(PositionContext);
-
-export const PositionProvider = ({ children }) => {
-  const [positions, setPositions] = useState([]);
-
-  const updatePosition = (id, newPos) => {
-    setPositions((prev) => ({
-      ...prev,
-      [id]: newPos,
-    }));
-  };
-
-  const value = { positions, updatePosition };
-
+function DisplayInfo({ position }) {
   return (
-    <PositionContext.Provider value={value}>
-      {children}
-    </PositionContext.Provider>
+    <div>
+      Current Position: X: {position.x}, Y: {position.y}
+    </div>
   );
-};
+}
+
+export default DisplayInfo;
