@@ -5,7 +5,6 @@ function Cherry({ style }) {
   return (
     <div style={style}>
       {" "}
-      {/* Apply style prop to the div */}
       <img
         src="../assets/images/cherry.png"
         className="Cherry"

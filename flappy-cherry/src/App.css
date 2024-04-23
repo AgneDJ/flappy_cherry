@@ -52,6 +52,7 @@
   margin-left: 100px;
   animation: moveBackground 20s linear infinite;
 }
+/* clouds should be moving separately from background! */
 
 @keyframes moveBackground {
   from {
