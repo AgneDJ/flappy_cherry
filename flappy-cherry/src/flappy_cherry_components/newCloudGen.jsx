@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import Cloud from "./cloud_1";
+import DisplayInfo from "./PositionContext";
 
 function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
+  const [cloudPositions, setCloudPositions] = useState([]);
 
   useEffect(() => {
     const numberOfImages = (Math.random() * 100) / 10;
@@ -12,18 +14,23 @@ function NewCloudGen() {
 
     for (let i = 0; i < numberOfImages; i++) {
       let timer = setTimeout(() => {
+        const topPosition = Math.random() * 100;
+        const rightPosition = Math.random() * 100;
+
         const newCloud = (
           <Cloud
             key={i}
             style={{
-              top: `${Math.random() * 100}%`,
-              right: `${Math.random() * 100}%`,
-              // height: "20%",
-              // width: "20%",
+              top: `${topPosition}%`,
+              right: `${rightPosition}%`,
             }}
           />
         );
         setClouds((prevClouds) => [...prevClouds, newCloud]);
+        setCloudPositions((prevPositions) => [
+          ...prevPositions,
+          { top: topPosition, right: rightPosition },
+        ]);
       }, i * delay);
 
       timers.push(timer);
@@ -35,6 +42,8 @@ function NewCloudGen() {
   return (
     <div style={{ position: "relative", width: "100%", height: "500px" }}>
       {clouds}
+      <DisplayInfo cloudPositions={cloudPositions} />
+      console.log(cloudPositions);
     </div>
   );
 }
