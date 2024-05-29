@@ -3,6 +3,7 @@ import Cherry from "./cherry";
 import DisplayInfo from "./PositionContext";
 import "../App.css";
 
+// Changes objects positions based on pressed key
 const Control = () => {
   const [cherryPosition, setCherryPosition] = useState({ x: 100, y: 100 });
   const [velocity, setVelocity] = useState({ x: 0, y: 0 });

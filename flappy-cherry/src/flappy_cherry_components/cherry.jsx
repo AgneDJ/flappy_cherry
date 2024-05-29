@@ -1,14 +1,15 @@
 import React from "react";
 import "../App.css";
 
-function Cherry({ style }) {
-  return (
+// Creates Cherry component
+function Cherry({ style }) { // Style is added as prop
+  return ( 
+    // Returns cherry image
     <div style={style}>
-      {" "}
       <img
-        src="../assets/images/cherry.png"
+        src="../assets/images/flying_cherry.webp"
         className="Cherry"
-        alt="A cherry"
+        alt="flying_cherry"
       />
     </div>
   );
