@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "../App.css";
 
+// React component, that generates a cloud (cloud image + image of Lilly)
 function Cloud({ style }) {
   return (
     <div>
