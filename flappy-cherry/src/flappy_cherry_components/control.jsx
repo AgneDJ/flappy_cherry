@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Cherry from "./cherry";
-
 import "../App.css";
 
+// Changes objects positions based on pressed key
 const Control = () => {
   const [position, setPosition] = useState({ x: 100, y: 100 });
   const [velocity, setVelocity] = useState({ x: 0, y: 0 });
