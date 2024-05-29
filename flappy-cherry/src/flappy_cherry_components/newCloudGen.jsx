@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 import Cloud from "./cloud_1";
 
+// Generates new random cloud component
 function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
 
