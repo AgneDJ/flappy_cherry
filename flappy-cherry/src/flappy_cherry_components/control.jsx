@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Cherry from "./cherry";
+import DisplayInfo from "./PositionContext";
 import "../App.css";
 
 // Changes objects positions based on pressed key
 const Control = () => {
-  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [cherryPosition, setCherryPosition] = useState({ x: 100, y: 100 });
   const [velocity, setVelocity] = useState({ x: 0, y: 0 });
 
   const useKeyDown = (callback, keys) => {
@@ -25,7 +26,7 @@ const Control = () => {
 
   useEffect(() => {
     const gravity = 0.2;
-    const friction = 0.8; // Adjusted friction for more realistic movement
+    const friction = 0.8;
 
     const updatePosition = () => {
       const newVelocity = { ...velocity, y: velocity.y + gravity };
@@ -36,8 +37,8 @@ const Control = () => {
       };
 
       const newPosition = {
-        x: position.x + newVelocityWithFriction.x,
-        y: position.y + newVelocityWithFriction.y,
+        x: cherryPosition.x + newVelocityWithFriction.x,
+        y: cherryPosition.y + newVelocityWithFriction.y,
       };
 
       // Boundary check
@@ -60,14 +61,14 @@ const Control = () => {
         setVelocity({ ...newVelocityWithFriction, y: 0 });
       }
 
-      setPosition(newPosition);
+      setCherryPosition(newPosition);
       setVelocity(newVelocityWithFriction);
     };
 
     const gameLoop = setInterval(updatePosition, 1000 / 60);
 
     return () => clearInterval(gameLoop);
-  }, [position, velocity]);
+  }, [cherryPosition, velocity]);
 
   useKeyDown(
     (key) => {
@@ -87,13 +88,14 @@ const Control = () => {
       <div
         style={{
           position: "relative",
-          left: position.x + "px",
-          top: position.y + "px",
+          left: cherryPosition.x + "px",
+          top: cherryPosition.y + "px",
           transition: "left 0.1s, top 0.1s",
           zIndex: 2,
         }}
       >
         <Cherry />
+        <DisplayInfo cherryPosition={cherryPosition} />
       </div>
     </div>
   );
