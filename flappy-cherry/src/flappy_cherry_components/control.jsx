@@ -43,9 +43,9 @@ const Control = () => {
 
       // Boundary check
       const minX = 0;
-      const maxX = 650; // Adjusted maximum X position
+      const maxX = 650;
       const minY = 0;
-      const maxY = 370; // Adjusted maximum Y position
+      const maxY = 370;
 
       if (newPosition.x < minX) {
         newPosition.x = minX;
