@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 
+//Returns cherry image as a component
 function Cherry({ style }) {
   return (
     <div style={style}>
