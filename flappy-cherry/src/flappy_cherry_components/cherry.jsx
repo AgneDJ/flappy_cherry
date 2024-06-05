@@ -1,15 +1,15 @@
 import React from "react";
 import "../App.css";
+import cherryImage from "../assets/images/flying_cherry.webp"
 
 //Returns cherry image as a component
 function Cherry({ style }) {
   return (
     <div style={style}>
-      {" "}
       <img
-        src="../assets/images/cherry.png"
+        src={cherryImage} // imported image, webpack used by create react app handles image correctly, includes it in the build
         className="Cherry"
-        alt="A cherry"
+        alt="flying cherry" // removed underscore for better readability
       />
     </div>
   );

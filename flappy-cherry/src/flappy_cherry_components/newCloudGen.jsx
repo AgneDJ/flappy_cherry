@@ -3,6 +3,7 @@ import "../App.css";
 import Cloud from "./cloud_1";
 import DisplayInfo from "./PositionContext";
 
+// Generates new random cloud component
 function NewCloudGen() {
   const [clouds, setClouds] = useState([]);
   const [cloudPositions, setCloudPositions] = useState([]);
