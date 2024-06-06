@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import cherryImage from "../assets/images/flying_cherry.webp"
+import cherryImage from "../assets/images/flying_cherry.webp";
 
 //Returns cherry image as a component
 function Cherry({ style }) {

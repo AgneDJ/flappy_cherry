@@ -6,13 +6,13 @@ import DisplayInfo from "./PositionContext";
 import "../App.css";
 
 const Over = () => {
+  //create two components: game over and checking
   //when collision happens: stop the game, show score table, show 'game over'
   // get current cherry position;
   // get any generated cloud position;
   // check if current cherry position overlaps cloud position
   // if yes: stop Game
   // if no: continue checking
-  // ---checking and game over could be two separate components
 };
 
 export default Over;
